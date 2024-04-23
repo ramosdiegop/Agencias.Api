@@ -132,6 +132,7 @@ namespace Agencias.Api.Data.Repository
 					Cantidad_Campana = item.Cantidad_Campana,
 					Proxima = item.Proxima,
 					Tope_Por = (item.Tope_por == null) ? 0 : item.Tope_por,
+					C_produosuper = (item.ProduOSuper == 0) ? "Productor" : "Supervisor" ,
 					SubCategorias = sub
 
 
@@ -153,9 +154,13 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<Categoria> Create(Categoria categoria)
 		{
-			await _Conte.Categoria.AddAsync(categoria);
+			
+
+			_Conte.Categoria.Add(categoria);
 			await _Conte.SaveChangesAsync();
 			return categoria;
+
+
 		}
 
 		public async Task<string> Delete(int id)
@@ -173,20 +178,16 @@ namespace Agencias.Api.Data.Repository
 		}
 
 
-		public async Task<Categoria> Update(Categoria categopria)
+		public async Task<Categoria> Update(Categoria categoria)
 		{
-			_Conte.Categoria.Update(categopria);
+			_Conte.Categoria.Update(categoria);
 			await _Conte.SaveChangesAsync();
-			return categopria;
+			return categoria;
+
 
 		}
 
-		Task<Categoria> ICategoria.Create(Categoria categoria)
-		{
-			throw new NotImplementedException();
-		}
-
-		Task<CategoriaDto> ICategoria.GetById(int Id)
+		public async Task<CategoriaDto> GetById(int Id)
 		{
 			throw new NotImplementedException();
 		}

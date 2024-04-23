@@ -31,5 +31,24 @@ namespace Agencias.Api.Data.Mapper
 
 			return age;
 		}
+
+
+		public Categoria MappCategoria(CategoriaDto cmap)
+		{
+			var cate = new Categoria
+			{
+				Id = cmap.Id,
+				Nombre = cmap.Nombre,
+				ProduOSuper = cmap.Produosuper,
+				Proxima = cmap.Proxima,	
+				Tope_por = cmap.Tope_Por,
+				Cantidad_Campana = cmap.Cantidad_Campana	
+			};
+
+			return cate;
+		}
+
+
+
 	}
 }

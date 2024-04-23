@@ -16,6 +16,7 @@ namespace Agencias.Api.Domain.Dtos
 		public int? Cantidad_Campana { get; set; }
 		public int? Proxima { get; set; }
 		public int? Tope_Por { get; set; }
+		public string? C_produosuper { get; set; }
 
 		public virtual List<SubCategoriaDto>? SubCategorias { get; set; }
 	}

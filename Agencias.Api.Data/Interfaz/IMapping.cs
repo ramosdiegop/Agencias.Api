@@ -11,5 +11,6 @@ namespace Agencias.Api.Data.Interfaz
 	public interface IMapping
 	{
 		Agencia MappAgencia(AgenciaDto aMap);
+		Categoria MappCategoria(CategoriaDto categoria);
 	}
 }
