@@ -79,7 +79,7 @@ namespace Agencias.Api.Data.Repository
 
 					if (item.ToString().ToUpper() == "PRODUOSUPER")
 					{
-						fps = (filter.Filtro[cont].ToString().ToUpper()=="SI" || filter.Filtro[cont].ToString().ToUpper() == "S") ? 1 : 0 ;
+						fps = int.Parse(filter.Filtro[cont].ToString()); ;
 						predicate = predicate.And(p => p.ProduOSuper == fps);
 					}
 
@@ -128,10 +128,10 @@ namespace Agencias.Api.Data.Repository
 				{
 					Id = item.Id,
 					Nombre = item.Nombre,
-					Produosuper = (item.ProduOSuper == 0) ? "NO" : "SI",
+					Produosuper = item.ProduOSuper,
 					Cantidad_Campana = item.Cantidad_Campana,
 					Proxima = item.Proxima,
-					Tope_Por = item.Tope_por,
+					Tope_Por = (item.Tope_por == null) ? 0 : item.Tope_por,
 					SubCategorias = sub
 
 

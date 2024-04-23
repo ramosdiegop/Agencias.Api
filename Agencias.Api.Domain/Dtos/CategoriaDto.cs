@@ -12,7 +12,7 @@ namespace Agencias.Api.Domain.Dtos
 	{
 		public int Id { get; set; }
 		public string? Nombre { get; set; }
-		public string? Produosuper { get; set; }
+		public int? Produosuper { get; set; }
 		public int? Cantidad_Campana { get; set; }
 		public int? Proxima { get; set; }
 		public int? Tope_Por { get; set; }
