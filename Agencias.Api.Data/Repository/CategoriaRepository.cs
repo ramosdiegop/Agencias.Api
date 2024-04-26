@@ -61,7 +61,7 @@ namespace Agencias.Api.Data.Repository
 				var predicate = PredicateBuilder.New<Categoria>();
 				
 				string fno = "";
-				int fid, fps = 0;
+				int fid, fps,ftp = 0;
 				int cont = 0;
 				foreach (string item in filter.Colum)
 				{
@@ -81,6 +81,12 @@ namespace Agencias.Api.Data.Repository
 					{
 						fps = int.Parse(filter.Filtro[cont].ToString()); ;
 						predicate = predicate.And(p => p.ProduOSuper == fps);
+					}
+
+					if (item.ToString().ToUpper() == "TOPE_POR")
+					{						
+						ftp = int.Parse(filter.Filtro[cont].ToString()); ;
+						predicate = predicate.And(p => ((p.Tope_por==null)?0: p.Tope_por) == ftp);
 					}
 
 					cont++;
@@ -133,6 +139,7 @@ namespace Agencias.Api.Data.Repository
 					Proxima = item.Proxima,
 					Tope_Por = (item.Tope_por == null) ? 0 : item.Tope_por,
 					C_produosuper = (item.ProduOSuper == 0) ? "Productor" : "Supervisor" ,
+					C_tope_por = (item.Tope_por == 0 || item.Tope_por==null) ? "Cantidad de ventas" : "Sumatoria valor nominal",
 					SubCategorias = sub
 
 
@@ -154,11 +161,19 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<Categoria> Create(Categoria categoria)
 		{
-			
 
-			_Conte.Categoria.Add(categoria);
-			await _Conte.SaveChangesAsync();
-			return categoria;
+			try
+			{
+				_Conte.Categoria.Add(categoria);
+				await _Conte.SaveChangesAsync();
+				return categoria;
+
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
 
 
 		}
