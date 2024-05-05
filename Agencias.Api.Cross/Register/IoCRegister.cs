@@ -31,6 +31,7 @@ namespace Agencias.Api.Cross.Register
 			services.AddTransient<ILocalidad, LocalidadRepository>();
 			services.AddTransient<IMapping, MappingProfile>();
 			services.AddTransient<ICategoria, CategoriaRepository>();
+			services.AddTransient<ISubCategoria, SubCategoriaRepository>();
 
 
 
