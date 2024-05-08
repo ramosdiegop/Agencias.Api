@@ -57,35 +57,58 @@ namespace Agencias.Api.Data.Repository
 				//List<Agencia> Lagencia2 = new List<Agencia>();
 				string[] col = filter.Colum;
 				string[] fil = filter.Filtro;
-				var predicate = PredicateBuilder.New<Categoria>();
+				var predicate = PredicateBuilder.New<SubCategoria>();
 				
-				string fno = "";
-				int fid, fps,ftp = 0;
+				
+				int fad, ftp, fpp, fps, fpa, fas, fap, faa = 0;
 				int cont = 0;
 				foreach (string item in filter.Colum)
 				{
-					if (item.ToString().ToUpper() == "ID")
+					if (item.ToString().ToUpper() == "ANTIGUEDAD")
 					{
-						fid = int.Parse(filter.Filtro[cont].ToString());
-						//predicate = predicate.And(p => p.Idagencia.ToString().Contains(fid));
-						predicate = predicate.And(p => p.Id == fid);
+						fad = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Antiguedad == fad);
 					}
-					if (item.ToString().ToUpper() == "NOMBRE")
+					if (item.ToString().ToUpper() == "TOPE_VENTA")
 					{
-						fno = filter.Filtro[cont].ToString();
-						predicate = predicate.And(p => p.Nombre.Contains(fno));
-					}
-
-					if (item.ToString().ToUpper() == "PRODUOSUPER")
-					{
-						fps = int.Parse(filter.Filtro[cont].ToString()); ;
-						predicate = predicate.And(p => p.ProduOSuper == fps);
+						ftp = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Tope_Ventas == ftp);
 					}
 
-					if (item.ToString().ToUpper() == "TOPE_POR")
-					{						
-						ftp = int.Parse(filter.Filtro[cont].ToString()); ;
-						predicate = predicate.And(p => ((p.Tope_por==null)?0: p.Tope_por) == ftp);
+					if (item.ToString().ToUpper() == "POR_PRODPRO")
+					{
+						fpp = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Tope_Ventas == fpp);
+					}
+
+					if (item.ToString().ToUpper() == "POR_PRODSUP")
+					{
+						fps = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Tope_Ventas == fps);
+					}
+
+					if (item.ToString().ToUpper() == "POR_PRODAGE")
+					{
+						fpa = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Tope_Ventas == fpa);
+					}
+
+					if (item.ToString().ToUpper() == "POR_ADMIPRO")
+					{
+						fap = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Tope_Ventas == fap);
+					}
+
+					if (item.ToString().ToUpper() == "POR_ADMISUP")
+					{
+						fas = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Tope_Ventas == fas);
+					}
+
+					if (item.ToString().ToUpper() == "POR_ADMIAGE")
+					{
+						faa = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Tope_Ventas == faa);
 					}
 
 					cont++;
