@@ -1,4 +1,5 @@
-﻿using Agencias.Api.Data.Data;
+﻿using Agencias.Api.Cross.Authentication;
+using Agencias.Api.Data.Data;
 using Agencias.Api.Data.Interfaz;
 using Agencias.Api.Domain.Dtos;
 using Agencias.Api.Domain.Pagination;
@@ -9,6 +10,7 @@ namespace Agencias.Api.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
+	[Authenticate]
 	public class ProvinciaController : ControllerBase
 	{
 		private readonly IProvincia _IProvincia;

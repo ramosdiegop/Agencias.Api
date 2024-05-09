@@ -2,13 +2,14 @@
 using Agencias.Api.Data.Interfaz;
 using Agencias.Api.Domain.Dtos;
 using Agencias.Api.Domain.Pagination;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Agencias.Api.Cross.Authentication;
 
 namespace Agencias.Api.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
+	[Authenticate]
 	public class CategoriaController : ControllerBase
 	{
 		private readonly ICategoria _ICategoria;

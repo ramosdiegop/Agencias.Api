@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Agencias.Api.Data.Repository
 {
@@ -60,10 +61,22 @@ namespace Agencias.Api.Data.Repository
 				var predicate = PredicateBuilder.New<SubCategoria>();
 				
 				
-				int fad, ftp, fpp, fps, fpa, fas, fap, faa = 0;
+				int fad, ftp, fpp, fps, fpa, fas, fap, faa, fidc, fid= 0;
 				int cont = 0;
 				foreach (string item in filter.Colum)
 				{
+					if (item.ToString().ToUpper() == "ID")
+					{
+						fid = int.Parse(filter.Filtro[cont].ToString());
+						//predicate = predicate.And(p => p.Idagencia.ToString().Contains(fid));
+						predicate = predicate.And(p => p.Id == fid);
+					}
+					if (item.ToString().ToUpper() == "IDCATEGORIA")
+					{
+						fidc = int.Parse(filter.Filtro[cont].ToString());
+						//predicate = predicate.And(p => p.Idagencia.ToString().Contains(fid));
+						predicate = predicate.And(p => p.Idcategoria == fidc);
+					}
 					if (item.ToString().ToUpper() == "ANTIGUEDAD")
 					{
 						fad = int.Parse(filter.Filtro[cont].ToString());
@@ -121,7 +134,7 @@ namespace Agencias.Api.Data.Repository
 						.Take(validFilter.PageSize)
 						.ToListAsync();
 
-				totalRecords = _Conte.Categoria.Where(predicate).Count();
+				totalRecords = _Conte.SubCategoria.Where(predicate).Count();
 				/*------------*/
 
 				LSubCategoria = LSubCategoria2;
