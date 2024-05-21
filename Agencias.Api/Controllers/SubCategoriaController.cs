@@ -1,4 +1,5 @@
 ﻿using Agencias.Api.Cross.Authentication;
+using Agencias.Api.Data.Data;
 using Agencias.Api.Data.Interfaz;
 using Agencias.Api.Domain.Dtos;
 using Agencias.Api.Domain.Pagination;
@@ -38,6 +39,56 @@ namespace Agencias.Api.Controllers
 
 		}
 
+		[HttpPost("{id}")]
+		public async Task<ActionResult<SubCategoria>> Post(SubCategoria subcategoria)
+		{
+			SubCategoria LaSubCategoria;
+			try
+			{
+				LaSubCategoria = await _ISubCategoria.Create(subcategoria);
+				return Ok(LaSubCategoria);
+			}
+			catch (Exception e)
+			{
+
+				return NotFound("Error: " + e.Message);
+			}
+		}
+
+		[HttpPut]
+		public async Task<ActionResult<SubCategoria>> Put(SubCategoria subcategoria)
+		{
+			SubCategoria LaSubcategoria;
+			var up = subcategoria;
+			try
+			{
+				LaSubcategoria = await _ISubCategoria.Update(up);
+				return Ok(LaSubcategoria);
+			}
+			catch (Exception e)
+			{
+
+				return NotFound("Error: " + e.Message);
+			}
+		}
+
+
+		[HttpDelete("{id}")]
+		public async Task<ActionResult> Delete(int id)
+		{
+			try
+			{
+				string resultado = await _ISubCategoria.Delete(id);
+				return Ok();
+
+			}
+			catch (Exception e)
+			{
+				return NotFound(e.Message);
+
+			}
+
+		}
 
 
 	}
