@@ -212,6 +212,7 @@ namespace Agencias.Api.Data.Repository
 		{
 			_Conte.SubCategoria.Update(subcategoria);
 			await _Conte.SaveChangesAsync();
+			
 			return subcategoria;
 
 
