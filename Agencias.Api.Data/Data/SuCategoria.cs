@@ -16,7 +16,7 @@ namespace Agencias.Api.Data.Data
 		[ForeignKey("Categoria")]
 		public int Idcategoria { get; set; }
 		public int Antiguedad { get; set; }
-		public int Tope_Ventas { get; set; }
+		public Double Tope_Ventas { get; set; }
 		public Double Por_ProdPro { get; set; }
 		public Double Por_ProdSup { get; set; }
 		public Double Por_ProdAge { get; set; }
