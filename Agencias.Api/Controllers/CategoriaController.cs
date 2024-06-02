@@ -3,7 +3,7 @@ using Agencias.Api.Data.Interfaz;
 using Agencias.Api.Domain.Dtos;
 using Agencias.Api.Domain.Pagination;
 using Microsoft.AspNetCore.Mvc;
-using Agencias.Api.Cross.Authentication;
+using Agencias.Api.Authentication;
 
 namespace Agencias.Api.Controllers
 {

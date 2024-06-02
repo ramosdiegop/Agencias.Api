@@ -32,6 +32,11 @@ namespace Agencias.Api.Cross.Register
 			services.AddTransient<IMapping, MappingProfile>();
 			services.AddTransient<ICategoria, CategoriaRepository>();
 			services.AddTransient<ISubCategoria, SubCategoriaRepository>();
+			services.AddTransient<IGenero, GeneroRepository>();
+			services.AddTransient<IPlan, PlanRepository>();
+			services.AddTransient<IEstadoProductor, EstadoProductorRepository>();
+			services.AddTransient<ITipoDocumento, TipoDocumentoRepository>();
+
 
 
 

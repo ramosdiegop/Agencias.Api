@@ -1,4 +1,4 @@
-﻿using Agencias.Api.Cross.Authentication;
+﻿using Agencias.Api.Authentication;
 using Agencias.Api.Data.Data;
 using Agencias.Api.Data.Interfaz;
 using Agencias.Api.Domain.Dtos;

@@ -25,6 +25,12 @@ namespace Agencias.Api.Data.Context
 		public virtual DbSet<Provincia> Provincia { get; set; } = null!;
 		public virtual DbSet<Categoria> Categoria { get; set; } = null!;
 		public virtual DbSet<SubCategoria> SubCategoria { get; set; } = null!;
+		public virtual DbSet<Plan> Plan { get; set; } = null!;
+		public virtual DbSet<Productor> Productor { get; set; } = null!;
+		public virtual DbSet<Genero> Genero { get; set; } = null!;
+		public virtual DbSet<TipoDocumento> TipoDocumento { get; set; } = null!;
+		public virtual DbSet<EstadoProductor> EstadoProductor { get; set; } = null!;	
+
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
