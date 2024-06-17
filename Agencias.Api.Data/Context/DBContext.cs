@@ -30,6 +30,7 @@ namespace Agencias.Api.Data.Context
 		public virtual DbSet<Genero> Genero { get; set; } = null!;
 		public virtual DbSet<TipoDocumento> TipoDocumento { get; set; } = null!;
 		public virtual DbSet<EstadoProductor> EstadoProductor { get; set; } = null!;	
+		public virtual DbSet<Usuario> Usuarios { get; set; } = null!;	
 
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
