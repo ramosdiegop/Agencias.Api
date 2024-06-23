@@ -13,7 +13,6 @@ namespace Agencias.Api.Domain.Dtos
 		public string? Nombre { get; set; }
 		public string? Password { get; set; }
 
-		public List<AgenteAgencia>? agenteAgencias { get; set; }
 
 	}
 

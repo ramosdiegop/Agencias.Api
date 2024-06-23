@@ -36,9 +36,8 @@ namespace Agencias.Api.Cross.Register
 			services.AddTransient<IPlan, PlanRepository>();
 			services.AddTransient<IEstadoProductor, EstadoProductorRepository>();
 			services.AddTransient<ITipoDocumento, TipoDocumentoRepository>();
-
-
-
+			services.AddTransient<IUsuario, UsuarioRepository>();
+			services.AddTransient<IMenu, MenuRepository>();
 
 
 			return services;
@@ -46,7 +45,6 @@ namespace Agencias.Api.Cross.Register
 
 		private static IServiceCollection AddRegisterServices(this IServiceCollection services)
 		{
-
 
 			return services;
 		}

@@ -14,8 +14,8 @@ namespace Agencias.Api.Data.Data
 		[Key]
 		public int Id { get; set; }
 		[Column("usuario")]
-		public string? Nombre_Usuario { get; set; }
-		public string? Nombre { get; set; }
+		public string Nombre_Usuario { get; set; }
+		public string Nombre { get; set; }
 		public string? Password { get; set; }
 		
 	}

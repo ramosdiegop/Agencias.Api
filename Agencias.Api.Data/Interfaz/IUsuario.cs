@@ -11,12 +11,14 @@ namespace Agencias.Api.Data.Interfaz
 {
 	public interface IUsuario
 	{
-		Task<PagedResponse<List<Usuario>>> PostAll(PaginationFilter filter);
+		Task<PagedResponse<List<UsuarioDto>>> PostAll(PaginationFilter filter);
 		Task<List<Usuario>> GetAllSelect();
 		Task<Usuario> Create(Usuario usuario);
 		Task<Usuario> Update(Usuario usuario);
 		Task<string> Delete(int id);
 		Task<Usuario> GetById(int Id);
+		Task<UsuarioDto> GetByUsuario(string usuario);
+
 
 	}
 }
