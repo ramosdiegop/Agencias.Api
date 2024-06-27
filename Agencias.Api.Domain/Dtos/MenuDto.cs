@@ -20,6 +20,19 @@ namespace Agencias.Api.Domain.Dtos
 
 	}
 
+	public class menues
+	{
+		public item items { get; set; }
 
+
+	}
+
+
+	public class item {
+		public string label { get; set; }
+        public string icon { get; set; }
+        public string routerLink { get; set; }
+	
+	}
 
 }
