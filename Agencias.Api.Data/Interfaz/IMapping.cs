@@ -12,5 +12,6 @@ namespace Agencias.Api.Data.Interfaz
 	{
 		Agencia MappAgencia(AgenciaDto aMap);
 		Categoria MappCategoria(CategoriaDto categoria);
+		List<ItemDto> MappMenu(List<MenuDto> menu);
 	}
 }

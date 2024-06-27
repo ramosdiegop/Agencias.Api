@@ -1,9 +1,12 @@
 ﻿using Agencias.Api.Authentication;
 using Agencias.Api.Data.Data;
+using Agencias.Api.Data.Mapper;
 using Agencias.Api.Data.Interfaz;
+using Agencias.Api.Domain.Dtos;
 using Agencias.Api.Domain.Pagination;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace Agencias.Api.Controllers
 {
@@ -13,9 +16,11 @@ namespace Agencias.Api.Controllers
 	public class MenuController : ControllerBase
 	{
 		private readonly IMenu _IMenu;
-		public MenuController(IMenu Imenu)
+		private readonly IMapping _mapping;
+		public MenuController(IMenu Imenu,IMapping Imapp)
 		{
 			_IMenu = Imenu;
+			_mapping = Imapp;
 		}
 		
 		// GETAll: api Lista usuario/
@@ -108,12 +113,13 @@ namespace Agencias.Api.Controllers
 		}
 
 		[HttpGet]
-		public async Task<ActionResult<IEnumerable<Menu>>> GetByUsuario([FromQuery] int idusuario)
+		public async Task<ActionResult<IEnumerable<ItemDto>>> GetByUsuario([FromQuery] int idusuario)
 		{
 			try
 			{
 				var Lmenu = await _IMenu.GetByUsuario(idusuario);
-				return Ok(Lmenu);
+				var i_menu = _mapping.MappMenu(Lmenu);
+				return Ok(i_menu);
 
 			}
 			catch (Exception e)

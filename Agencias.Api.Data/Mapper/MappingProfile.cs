@@ -49,7 +49,24 @@ namespace Agencias.Api.Data.Mapper
 		}
 
 
+		public List<ItemDto> MappMenu(List<MenuDto> menu)
+		{
+			List<ItemDto> L_menu = new List<ItemDto>();
 
+			foreach (MenuDto m in menu) { 
+				var i_menu = new ItemDto
+				{
+				label = m.Nombre,
+				icon = null,
+				routerLink = m.link,
+				items = null
+				};
+
+				L_menu.Add(i_menu);
+			}
+
+			return L_menu;
+		}
 
 	}
 }
