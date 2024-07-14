@@ -38,7 +38,7 @@ namespace Agencias.Api.Data.Repository
 					Eslink = item.Eslink,
 					Idmenu = item.Idmenu,
 					Idsubmenu = item.Idsubmenu,
-					link = item.Eslink,
+					link = item.link,
 					Ejecutable = item.Ejecutable,
 
 				};

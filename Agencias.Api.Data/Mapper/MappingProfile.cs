@@ -53,17 +53,57 @@ namespace Agencias.Api.Data.Mapper
 		{
 			List<ItemDto> L_menu = new List<ItemDto>();
 
+			//Menu
 			foreach (MenuDto m in menu) { 
-				var i_menu = new ItemDto
-				{
-				label = m.Nombre,
-				icon = null,
-				routerLink = m.link,
-				items = null
-				};
 
-				L_menu.Add(i_menu);
+				if (m.Esmenu == "SI")
+				{
+					var i_menu = new ItemDto
+					{
+						label = m.Nombre,
+						icon = null,
+						routerLink = m.link,
+						items = null,
+						Id = m.Id,
+					};
+					L_menu.Add(i_menu);
+				}
 			}
+
+			//options
+			foreach (MenuDto m in menu)
+			{
+				if (m.Esmenu == "NO")
+				{
+					var i_menu = new ItemDto
+					{
+						label = m.Nombre,
+						icon = null,
+						routerLink = m.link,
+						items = null,
+						Id = m.Id,
+					};
+
+					
+					var opmenu = L_menu.Find(x => x.Id == m.Idmenu);
+					var index = L_menu.IndexOf(opmenu);
+					if (index != -1)
+					{
+						List<ItemDto> Litems = new List<ItemDto>();
+						if (opmenu.items != null)
+							Litems = opmenu.items;
+						Litems.Add(i_menu);
+						opmenu.items=Litems;
+
+						L_menu[index] = opmenu;
+					}
+
+
+
+				}
+
+			}
+
 
 			return L_menu;
 		}

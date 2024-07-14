@@ -23,10 +23,11 @@ namespace Agencias.Api.Domain.Dtos
 
 	public class ItemDto {
 
+		public int Id { get; set; }
 		public string label { get; set; }
         public string icon { get; set; }
         public string routerLink { get; set; }
-		public ItemDto items { get; set; }
+		public List<ItemDto> items { get; set; }
 	}
 
 }
