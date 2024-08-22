@@ -28,6 +28,7 @@ namespace Agencias.Api.Domain.Dtos
         public string icon { get; set; }
         public string routerLink { get; set; }
 		public List<ItemDto> items { get; set; }
+		
 	}
 
 }

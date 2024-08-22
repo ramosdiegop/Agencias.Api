@@ -27,5 +27,7 @@ namespace Agencias.Api.Data.Data
 		public string? link { get; set; }	
 
 
+
+
 	}
 }
