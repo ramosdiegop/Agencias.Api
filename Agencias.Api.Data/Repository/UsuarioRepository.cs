@@ -44,13 +44,13 @@ namespace Agencias.Api.Data.Repository
 
 			if (filter.Colum.Count() == 0)
 			{
-				var Lusuario1 = await _Conte.Usuarios
+				var Lusuario1 = await _Conte.Usuario
 										.OrderBy($"{Elorden} {LaForma}")
 										.Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
 										.Take(validFilter.PageSize).ToListAsync();
 
 				Lusuario = Lusuario1;
-				totalRecords = _Conte.Usuarios.Count();
+				totalRecords = _Conte.Usuario.Count();
 			}
 			else
 			{
@@ -83,14 +83,14 @@ namespace Agencias.Api.Data.Repository
 					cont++;
 				}
 
-				var Lusuario1 = await _Conte.Usuarios.Where(predicate)
+				var Lusuario1 = await _Conte.Usuario.Where(predicate)
 									.OrderBy($"{Elorden} {LaForma}")
 									.Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
 									.Take(validFilter.PageSize).ToListAsync();
 
 				Lusuario = Lusuario1;
 
-				totalRecords = _Conte.Agente.Where(predicate).Count();
+				totalRecords = _Conte.Usuario.Where(predicate).Count();
 
 			}
 
@@ -103,7 +103,7 @@ namespace Agencias.Api.Data.Repository
 				{
 					Id = item.Id,
 					Nombre = item.Nombre,
-					Nombre_Usuario = item.Nombre_Usuario,
+					Usuario = item.Nombre_Usuario,
 					Password = item.Password,
 				};
 
@@ -127,7 +127,7 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<Usuario> Create(Usuario usuario)
 		{	
-			await _Conte.Usuarios.AddAsync(usuario);
+			await _Conte.Usuario.AddAsync(usuario);
 			await _Conte.SaveChangesAsync();
 			return usuario;
 		}
@@ -135,10 +135,10 @@ namespace Agencias.Api.Data.Repository
 		public async Task<string> Delete(int id)
 		{
 			string error = "Registro eliminado Correctamente ";
-			var Elusuario = _Conte.Usuarios.Find(id);
+			var Elusuario = _Conte.Usuario.Find(id);
 			if (Elusuario != null)
 			{
-				_Conte.Usuarios.Remove(Elusuario);
+				_Conte.Usuario.Remove(Elusuario);
 				await _Conte.SaveChangesAsync();
 			}
 			else error = "No se encontro el registro";
@@ -149,21 +149,21 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<Usuario> Update(Usuario usuario)
 		{
-			_Conte.Usuarios.Update(usuario);
+			_Conte.Usuario.Update(usuario);
 			await _Conte.SaveChangesAsync();
 			return usuario;
 		}
 
 		public async Task<List<Usuario>> GetAllSelect()
 		{
-			var Lusuario = await _Conte.Usuarios.ToListAsync();
+			var Lusuario = await _Conte.Usuario.ToListAsync();
 			return Lusuario;
 				
 		}
 
 		public async Task<UsuarioDto> GetByUsuario(string usuario)
 		{
-			var Lusuario = await _Conte.Usuarios.Where(w => w.Nombre_Usuario==usuario)
+			var Lusuario = await _Conte.Usuario.Where(w => w.Nombre_Usuario==usuario)
 									.FirstOrDefaultAsync();
 
 			UsuarioDto dtoUsuario = new UsuarioDto();
@@ -171,7 +171,7 @@ namespace Agencias.Api.Data.Repository
 			{
 				dtoUsuario.Id = Lusuario.Id;
 				dtoUsuario.Nombre = Lusuario.Nombre;
-				dtoUsuario.Nombre_Usuario = usuario;
+				dtoUsuario.Usuario = usuario;
 				dtoUsuario.Password = Lusuario.Password;
 				
 			}
