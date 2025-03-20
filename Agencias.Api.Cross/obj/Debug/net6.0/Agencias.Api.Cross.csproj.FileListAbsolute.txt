@@ -27,8 +27,9 @@ C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\A
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\Agencias.Api.Cross.AssemblyInfoInputs.cache
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\Agencias.Api.Cross.AssemblyInfo.cs
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\Agencias.Api.Cross.csproj.CoreCompileInputs.cache
-C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\Agencias.Api.Cross.csproj.CopyComplete
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\Agencias.Api.Cross.dll
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\refint\Agencias.Api.Cross.dll
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\Agencias.Api.Cross.pdb
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\ref\Agencias.Api.Cross.dll
+C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\Agencias.Api.Cross.sourcelink.json
+C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Cross\obj\Debug\net6.0\Agencias.A8301F0B.Up2Date

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "hs40QLhlhgJqHfYVcmdgpAoAutp8Ahn13tBEmkYZNYOfvEaVXaHAwCcATpbXSLcdsGcTmREMBbGmd/q4u0CRCw==",
+=======
+  "dgSpecHash": "byrGeOePNzY=",
+>>>>>>> 5e092510904fbd8094adb72f98b736559ea32169
   "success": true,
   "projectFilePath": "C:\\Users\\dramos\\source\\repos\\Agencias.Api\\Agencias.Api.Cross\\Agencias.Api.Cross.csproj",
   "expectedPackageFiles": [

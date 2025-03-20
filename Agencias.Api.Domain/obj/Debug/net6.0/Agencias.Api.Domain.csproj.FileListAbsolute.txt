@@ -22,3 +22,4 @@ C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Domain\obj\Debug\net6.0\
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Domain\obj\Debug\net6.0\refint\Agencias.Api.Domain.dll
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Domain\obj\Debug\net6.0\Agencias.Api.Domain.pdb
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Domain\obj\Debug\net6.0\ref\Agencias.Api.Domain.dll
+C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Domain\obj\Debug\net6.0\Agencias.Api.Domain.sourcelink.json

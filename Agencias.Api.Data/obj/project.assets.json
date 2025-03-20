@@ -3863,7 +3863,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net6.0": {
@@ -3922,8 +3928,24 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+>>>>>>> 5e092510904fbd8094adb72f98b736559ea32169
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Linq.Dynamic.Core\" 1.3.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-4cv2-4hjh-77rx",
+      "libraryId": "System.Linq.Dynamic.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

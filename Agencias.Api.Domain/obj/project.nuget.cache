@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "zAEtrsL0OTsB4uh98l2LOuHBbnB39fIloN5ZkyWJfUyeVWs7oNGILXCUzYiv0bgNkdJI/MAlaWy/imRHrm3lSA==",
+=======
+  "dgSpecHash": "8huQi4F9vNc=",
+>>>>>>> 5e092510904fbd8094adb72f98b736559ea32169
   "success": true,
   "projectFilePath": "C:\\Users\\dramos\\source\\repos\\Agencias.Api\\Agencias.Api.Domain\\Agencias.Api.Domain.csproj",
   "expectedPackageFiles": [
