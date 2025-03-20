@@ -90,7 +90,7 @@ namespace Agencias.Api.Data.Repository
 
 				Lusuario = Lusuario1;
 
-				totalRecords = _Conte.Agente.Where(predicate).Count();
+				totalRecords = _Conte.Usuarios.Where(predicate).Count();
 
 			}
 

@@ -26,9 +26,10 @@ C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Ag
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.Api.Data.AssemblyInfoInputs.cache
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.Api.Data.AssemblyInfo.cs
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.Api.Data.csproj.CoreCompileInputs.cache
-C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.Api.Data.csproj.CopyComplete
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.Api.Data.dll
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\refint\Agencias.Api.Data.dll
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.Api.Data.pdb
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.Api.Data.genruntimeconfig.cache
 C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\ref\Agencias.Api.Data.dll
+C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.Api.Data.sourcelink.json
+C:\Users\PCDiego\source\repos\Agencias.Api\Agencias.Api.Data\obj\Debug\net6.0\Agencias.540E291D.Up2Date

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NBktRYiQjpgAwPIaFHeU4GW6YeEO92Kg8Dnaep58zdQd9dDlks0QWGGgfIZEEJCveJ4B46WHXusWtEjMOUlN9A==",
+  "dgSpecHash": "//CX+/0Iq64=",
   "success": true,
   "projectFilePath": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Agencias.Api.Data.csproj",
   "expectedPackageFiles": [
@@ -80,5 +80,16 @@
     "C:\\Users\\PCDiego\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\PCDiego\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Linq.Dynamic.Core\" 1.3.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-4cv2-4hjh-77rx",
+      "libraryId": "System.Linq.Dynamic.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
