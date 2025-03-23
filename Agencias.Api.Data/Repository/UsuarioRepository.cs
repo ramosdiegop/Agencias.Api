@@ -90,14 +90,11 @@ namespace Agencias.Api.Data.Repository
 
 				Lusuario = Lusuario1;
 
-<<<<<<< HEAD
+
 				totalRecords = _Conte.Usuario.Where(predicate).Count();
-=======
-				totalRecords = _Conte.Usuarios.Where(predicate).Count();
->>>>>>> 5e092510904fbd8094adb72f98b736559ea32169
 
 			}
-
+ 
 
 			List<UsuarioDto> dtoUsuario = new List<UsuarioDto>();
 

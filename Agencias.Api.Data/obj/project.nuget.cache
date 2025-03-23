@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "9I6zhK/DGRUNrsywzJ8elXn4khFV2ODWIgLQ30kEa0ESZe9CcbEV2HbNE8WNzfMGbIopln3f7NGN/r5Wnc808g==",
-=======
-  "dgSpecHash": "//CX+/0Iq64=",
->>>>>>> 5e092510904fbd8094adb72f98b736559ea32169
+  "dgSpecHash": "DO7+R89lbfqBBXwUJUI6VH/bqJMs4FZIdTgdTBhknok/LSZQzxkb4t7U8oqDp7G95hquF5Jgiv0gx/96lCo+yw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dramos\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Agencias.Api.Data.csproj",
   "expectedPackageFiles": [
@@ -86,14 +82,10 @@
   ],
   "logs": [
     {
-      "code": "NU1903",
+      "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"System.Linq.Dynamic.Core\" 1.3.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-4cv2-4hjh-77rx",
-      "libraryId": "System.Linq.Dynamic.Core",
-      "targetGraphs": [
-        "net6.0"
-      ]
+      "message": "Problema al leer el archivo de caché C:\\Users\\dramos\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

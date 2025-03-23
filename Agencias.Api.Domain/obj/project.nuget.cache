@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "zAEtrsL0OTsB4uh98l2LOuHBbnB39fIloN5ZkyWJfUyeVWs7oNGILXCUzYiv0bgNkdJI/MAlaWy/imRHrm3lSA==",
-=======
-  "dgSpecHash": "8huQi4F9vNc=",
->>>>>>> 5e092510904fbd8094adb72f98b736559ea32169
+  "dgSpecHash": "cwIjej4XWkuMai3c1hrh7yZoUEYQ2dRUaPtwSwKsRQZ4UxzMM3U1+Xhf1HTxZrRdq02WvHKcyPxVMM1WEwC71g==",
   "success": true,
   "projectFilePath": "C:\\Users\\dramos\\source\\repos\\Agencias.Api\\Agencias.Api.Domain\\Agencias.Api.Domain.csproj",
   "expectedPackageFiles": [
@@ -29,5 +25,12 @@
     "C:\\Users\\dramos\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "C:\\Users\\dramos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\dramos\\source\\repos\\Agencias.Api\\Agencias.Api.Domain\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

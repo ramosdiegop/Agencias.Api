@@ -24,8 +24,11 @@ namespace Agencias.Api.Data.Data
 		public string Ejecutable { get; set; }
 		public int? Idmenu { get; set; }
 		public int? Idsubmenu { get; set; }
-		public string? link { get; set; }	
-
+		public string? link { get; set; }
+		public DateTime Created_Date { get; set; }
+		public int Created_User { get; set; }
+		public DateTime? Modified_Date { get; set; }
+		public int? Modified_User { get; set; }
 
 
 

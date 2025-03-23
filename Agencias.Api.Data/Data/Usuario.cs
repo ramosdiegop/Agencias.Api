@@ -16,7 +16,11 @@ namespace Agencias.Api.Data.Data
 		[Column("usuario")]
 		public string Nombre_Usuario { get; set; }
 		public string Nombre { get; set; }
-		public string? Password { get; set; }
-		
+		public string Password { get; set; }
+		public DateTime Created_Date  { get; set; }
+		public int Created_User { get; set; }
+		public DateTime? Modified_Date { get; set; }
+		public int? Modified_User { get; set; }
+
 	}
 }
