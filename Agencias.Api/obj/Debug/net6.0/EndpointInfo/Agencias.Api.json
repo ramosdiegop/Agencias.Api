@@ -3435,6 +3435,24 @@
           "link": {
             "type": "string",
             "nullable": true
+          },
+          "created_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_User": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modified_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "modified_User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -3928,6 +3946,24 @@
           },
           "password": {
             "type": "string",
+            "nullable": true
+          },
+          "created_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_User": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modified_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "modified_User": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },

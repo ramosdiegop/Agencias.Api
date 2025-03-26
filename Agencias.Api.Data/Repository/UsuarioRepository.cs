@@ -106,6 +106,11 @@ namespace Agencias.Api.Data.Repository
 					Nombre = item.Nombre,
 					Usuario = item.Nombre_Usuario,
 					Password = item.Password,
+					Created_Date = item.Created_Date,
+					Created_User = item.Created_User,
+					Modified_Date = item.Modified_Date,
+					Modified_User = item.Modified_User
+
 				};
 
 				dtoUsuario.Add(UnUsuario);
@@ -174,7 +179,12 @@ namespace Agencias.Api.Data.Repository
 				dtoUsuario.Nombre = Lusuario.Nombre;
 				dtoUsuario.Usuario = usuario;
 				dtoUsuario.Password = Lusuario.Password;
-				
+				dtoUsuario.Created_Date = Lusuario.Created_Date;
+				dtoUsuario.Created_User = Lusuario.Created_User;
+				dtoUsuario.Modified_Date = Lusuario.Modified_Date;
+				dtoUsuario.Modified_User = Lusuario.Modified_User;
+
+
 			}
 			
 
