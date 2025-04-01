@@ -1,28 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Agencias.Api.Data.Data
 {
-	[Table("usuario")]
-	public class Usuario
+	[Table("menu_usuario")]
+	public class MenuUsuario
 	{
 		[Key]
 		public int Id { get; set; }
-		[Column("usuario")]
-		public string Nombre_Usuario { get; set; }
-		public string Nombre { get; set; }
-		public string Password { get; set; }
-		public DateTime Created_Date  { get; set; }
+		[ForeignKey("Usuarios")]
+		public int Usuario_id { get; set; }
+		[ForeignKey("Menues")]
+		public int Menu_id { get; set; }
+		public DateTime Created_Date { get; set; }
 		public int Created_User { get; set; }
 		public DateTime? Modified_Date { get; set; }
 		public int? Modified_User { get; set; }
 
-		public virtual ICollection<MenuUsuario>? MenuUsuarios { get; set; }
+
+		public virtual Usuario? Usuarios { get; set; }
+		public virtual Menu? Menues { get; set; }
 
 	}
 }

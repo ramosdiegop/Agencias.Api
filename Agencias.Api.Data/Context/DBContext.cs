@@ -32,6 +32,7 @@ namespace Agencias.Api.Data.Context
 		public virtual DbSet<EstadoProductor> EstadoProductor { get; set; } = null!;	
 		public virtual DbSet<Usuario> Usuario { get; set; } = null!;
 		public virtual DbSet<Menu> Menues { get; set; } = null!;
+		public virtual DbSet<MenuUsuario> MenuUsuarios { get; set; } = null!;
 
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

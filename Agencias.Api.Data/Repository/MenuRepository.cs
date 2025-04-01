@@ -24,7 +24,12 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<List<MenuDto>> GetByUsuario(int idusuario)
 		{
-			var Lmenu = await _Conte.Menues.ToListAsync();
+			/*var Lmenu = await _Conte.Menues.ToListAsync();*/
+
+			var Lmenu = await _Conte.MenuUsuarios
+									.Where(w => w.Usuario_id==idusuario)
+									.Include(i => i.Menues)
+									.ToListAsync();
 
 			List<MenuDto> dtoMenu = new List<MenuDto>();
 			foreach (var item in Lmenu)
@@ -32,14 +37,14 @@ namespace Agencias.Api.Data.Repository
 				var unmenu = new MenuDto
 				{
 					Id = item.Id,
-					Nombre = item.Nombre,
-					Esmenu = item.Esmenu,
-					EsSubmenu = item.EsSubmenu,
-					Eslink = item.Eslink,
-					Idmenu = item.Idmenu,
-					Idsubmenu = item.Idsubmenu,
-					link = item.link,
-					Ejecutable = item.Ejecutable,
+					Nombre = item.Menues.Nombre,
+					Esmenu = item.Menues.Esmenu,
+					EsSubmenu = item.Menues.EsSubmenu,
+					Eslink = item.Menues.Eslink,
+					Idmenu = item.Menues.Idmenu,
+					Idsubmenu = item.Menues.Idsubmenu,
+					link = item.Menues.link,
+					Ejecutable = item.Menues.Ejecutable,
 
 				};
 				dtoMenu.Add(unmenu);

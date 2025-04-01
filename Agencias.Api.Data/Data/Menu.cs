@@ -31,6 +31,8 @@ namespace Agencias.Api.Data.Data
 		public int? Modified_User { get; set; }
 
 
+		public virtual ICollection<MenuUsuario>? MenuUsuarios { get; set; }
+		
 
 	}
 }

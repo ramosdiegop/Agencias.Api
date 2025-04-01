@@ -104,7 +104,7 @@ namespace Agencias.Api.Data.Repository
 				{
 					Id = item.Id,
 					Nombre = item.Nombre,
-					Usuario = item.Nombre_Usuario,
+					Nombre_Usuario = item.Nombre_Usuario,
 					Password = item.Password,
 					Created_Date = item.Created_Date,
 					Created_User = item.Created_User,
@@ -177,7 +177,7 @@ namespace Agencias.Api.Data.Repository
 			{
 				dtoUsuario.Id = Lusuario.Id;
 				dtoUsuario.Nombre = Lusuario.Nombre;
-				dtoUsuario.Usuario = usuario;
+				dtoUsuario.Nombre_Usuario = usuario;
 				dtoUsuario.Password = Lusuario.Password;
 				dtoUsuario.Created_Date = Lusuario.Created_Date;
 				dtoUsuario.Created_User = Lusuario.Created_User;

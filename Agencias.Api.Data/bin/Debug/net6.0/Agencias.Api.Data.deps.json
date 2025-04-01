@@ -779,10 +779,7 @@
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
         },
         "runtime": {
-          "Agencias.Api.Domain.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Agencias.Api.Domain.dll": {}
         }
       }
     }
