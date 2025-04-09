@@ -3453,6 +3453,13 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "menuUsuarios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MenuUsuario"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -3516,6 +3523,48 @@
             "type": "string",
             "format": "uri",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MenuUsuario": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usuario_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "menu_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "created_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_User": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modified_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "modified_User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuarios": {
+            "$ref": "#/components/schemas/Usuario"
+          },
+          "menues": {
+            "$ref": "#/components/schemas/Menu"
           }
         },
         "additionalProperties": false
@@ -3964,6 +4013,13 @@
           "modified_User": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          },
+          "menuUsuarios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MenuUsuario"
+            },
             "nullable": true
           }
         },

@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "/BimDozjh6WOgiTlGmJixBatFNi4oNI6xC/zRFq9V6g=",
+  "Hash": "GHPrtCbMMBc2U+86eytT9VVlZFvBec/PZSUlsM7TO0M=",
   "Source": "Agencias.Api",
   "BasePath": "_content/Agencias.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

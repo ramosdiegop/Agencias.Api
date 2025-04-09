@@ -64,8 +64,8 @@ namespace Agencias.Api.Data.Mapper
 						icon = null,
 						routerLink = m.link,
 						items = null,
-						Id = m.Id,
-						
+						Id = (int)m.Idmenu
+
 					};
 					L_menu.Add(i_menu);
 				}

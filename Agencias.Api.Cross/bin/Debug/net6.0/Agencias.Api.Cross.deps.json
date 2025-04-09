@@ -690,7 +690,10 @@
           "System.Linq.Dynamic.Core": "1.3.11"
         },
         "runtime": {
-          "Agencias.Api.Data.dll": {}
+          "Agencias.Api.Data.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Agencias.Api.Domain/1.0.0": {
@@ -700,7 +703,10 @@
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
         },
         "runtime": {
-          "Agencias.Api.Domain.dll": {}
+          "Agencias.Api.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
