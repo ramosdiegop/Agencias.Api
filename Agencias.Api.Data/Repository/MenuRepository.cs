@@ -66,9 +66,28 @@ namespace Agencias.Api.Data.Repository
 			throw new NotImplementedException();
 		}
 
-		public async Task<List<Menu>> GetAllSelect()
+		public async Task<List<Menu>> GetAllSelect(int idusuario)
 		{
-			throw new NotImplementedException();
+			List<Menu> Lmenu = new List<Menu>();
+			if (idusuario == 0)
+				Lmenu = await _Conte.Menues.ToListAsync();
+			else
+			{
+				var usuariomenu = await _Conte.MenuUsuarios
+									.Where(w => w.Usuario_id == idusuario)
+									.Include(i => i.Menues)
+									.ToListAsync();
+
+				foreach (var item in usuariomenu)
+				{					
+					Lmenu.Add(item.Menues);
+				}
+				
+
+			}
+				
+
+			return Lmenu;
 		}
 
 		public async Task<Menu> GetById(int Id)
@@ -79,6 +98,7 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<PagedResponse<List<MenuDto>>> PostAll(PaginationFilter filter)
 		{
+
 			throw new NotImplementedException();
 		}
 

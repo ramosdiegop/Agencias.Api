@@ -41,13 +41,25 @@ namespace Agencias.Api.Controllers
 		}
 
 
-		[HttpGet("{select}")]
-		public async Task<ActionResult<IEnumerable<Menu>>> GetAllSelect()
+
+		[HttpGet("{usuario}")]
+		public async Task<ActionResult<IEnumerable<MenuAccesosDto>>> GetAllSelect(int usuario)
 		{
 			try
 			{
-				var Lmenu = await _IMenu.GetAllSelect();
-				return Ok(Lmenu);
+				if ((usuario == 0))
+				{
+					var Lmenu = await _IMenu.GetAllSelect(usuario);
+					var i_menu = _mapping.MappMenuCrud(Lmenu);
+					return Ok(i_menu);
+				}
+				else
+				{
+  				   var Lmenu = await _IMenu.GetAllSelect(usuario);
+				   var i_menu = _mapping.MappMenuCrud(Lmenu);
+				   return Ok(i_menu);
+				}
+				
 
 			}
 			catch (Exception e)

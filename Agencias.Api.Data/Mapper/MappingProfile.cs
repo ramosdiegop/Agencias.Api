@@ -109,5 +109,70 @@ namespace Agencias.Api.Data.Mapper
 			return L_menu;
 		}
 
+
+		public List<MenuAccesosDto> MappMenuCrud(List<Menu> menu) 
+		{
+			List<MenuAccesosDto> L_menu = new List<MenuAccesosDto>();
+
+			//Menu
+			foreach (Menu m in menu)
+			{
+				if (m.Esmenu == "SI")
+				{
+					var datamenu = new DataMenu();
+					datamenu.name = m.Nombre;
+					var i_menu = new MenuAccesosDto
+					{
+						key = m.Id.ToString()+"-0",
+						data = datamenu,
+						children = null
+
+					};
+					L_menu.Add(i_menu);
+				}
+			}
+
+			//options
+			foreach (Menu m in menu)
+			{
+				if (m.Esmenu == "NO")
+				{
+					var datamenu = new DataMenu();
+					datamenu.name = m.Nombre;
+					var i_menu = new MenuAccesosDto
+					{
+						key = m.Idmenu.ToString() + "-"+m.Id.ToString(),
+						data = datamenu,
+						children = null
+					};
+
+
+					var opmenu = L_menu.Find(x => x.key == m.Idmenu.ToString() + "-0");
+					var index = L_menu.IndexOf(opmenu);
+					if (index != -1)
+					{
+						List<MenuAccesosDto> Litems = new List<MenuAccesosDto>();
+						if (opmenu.children != null)
+							Litems = opmenu.children;
+						Litems.Add(i_menu);
+						opmenu.children = Litems;
+
+						L_menu[index] = opmenu;
+					}
+
+
+
+				}
+
+			}
+
+
+			return L_menu;
+
+
+
+			return L_menu;
+		}
+
 	}
 }

@@ -31,4 +31,19 @@ namespace Agencias.Api.Domain.Dtos
 		
 	}
 
+
+	public class MenuAccesosDto
+	{
+		public string key { get; set; }
+		public  DataMenu data { get; set; }
+		public List<MenuAccesosDto> children { get; set; }
+
+	}
+
+
+	public class DataMenu{ 
+		public string name { get; set; }
+	}
+
+
 }
