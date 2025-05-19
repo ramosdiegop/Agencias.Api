@@ -825,20 +825,20 @@
   {
     "ContainingType": "Agencias.Api.Controllers.MenuController",
     "Method": "GetAllSelect",
-    "RelativePath": "api/Menu/{select}",
+    "RelativePath": "api/Menu/{usuario}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "select",
-        "Type": "",
+        "Name": "usuario",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Agencias.Api.Data.Data.Menu, Agencias.Api.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Agencias.Api.Domain.Dtos.MenuAccesosDto, Agencias.Api.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

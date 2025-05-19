@@ -68,7 +68,7 @@ namespace Agencias.Api.Data.Repository
 						fid = int.Parse(filter.Filtro[cont].ToString());
 						predicate = predicate.And(p => p.Id == fid);
 					}
-					if (item.ToString().ToUpper() == "NOMBRE")
+					if (item.ToString().ToUpper() == "NOMBRE_USUARIO")
 					{
 						fno = filter.Filtro[cont].ToString();
 						predicate = predicate.And(p => p.Nombre.Contains(fno));

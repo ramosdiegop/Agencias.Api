@@ -25,6 +25,7 @@ namespace Agencias.Api.Controllers
 			try
 			{
 				var Lusuario = await _IUsuario.PostAll(filter);
+				//Thread.Sleep(10000);
 				return Ok(Lusuario);
 
 			}
@@ -42,6 +43,8 @@ namespace Agencias.Api.Controllers
 			try
 			{
 				var Lusuario = await _IUsuario.GetAllSelect();
+
+				
 				return Ok(Lusuario);
 
 			}

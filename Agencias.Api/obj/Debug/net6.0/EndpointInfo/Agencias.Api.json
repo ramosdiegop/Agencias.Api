@@ -1365,18 +1365,19 @@
         }
       }
     },
-    "/api/Menu/{select}": {
+    "/api/Menu/{usuario}": {
       "get": {
         "tags": [
           "Menu"
         ],
         "parameters": [
           {
-            "name": "select",
+            "name": "usuario",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -1388,7 +1389,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Menu"
+                    "$ref": "#/components/schemas/MenuAccesosDto"
                   }
                 }
               },
@@ -1396,7 +1397,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Menu"
+                    "$ref": "#/components/schemas/MenuAccesosDto"
                   }
                 }
               },
@@ -1404,7 +1405,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Menu"
+                    "$ref": "#/components/schemas/MenuAccesosDto"
                   }
                 }
               }
@@ -3080,6 +3081,16 @@
         },
         "additionalProperties": false
       },
+      "DataMenu": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "EstadoProductor": {
         "type": "object",
         "properties": {
@@ -3458,6 +3469,26 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/MenuUsuario"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MenuAccesosDto": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/DataMenu"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MenuAccesosDto"
             },
             "nullable": true
           }
