@@ -5,10 +5,7 @@ using Agencias.Api.Domain.Dtos;
 using Agencias.Api.Domain.Pagination;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Agencias.Api.Data.Repository
 {
@@ -25,31 +22,61 @@ namespace Agencias.Api.Data.Repository
 		public async Task<List<MenuDto>> GetByUsuario(int idusuario)
 		{
 			/*var Lmenu = await _Conte.Menues.ToListAsync();*/
-
-			var Lmenu = await _Conte.MenuUsuarios
-									.Where(w => w.Usuario_id==idusuario)
-									.Include(i => i.Menues)
-									.ToListAsync();
-
 			List<MenuDto> dtoMenu = new List<MenuDto>();
-			foreach (var item in Lmenu)
-			{
-				var unmenu = new MenuDto
-				{
-					Id = item.Id,
-					Nombre = item.Menues.Nombre,
-					Esmenu = item.Menues.Esmenu,
-					EsSubmenu = item.Menues.EsSubmenu,
-					Eslink = item.Menues.Eslink,
-					Idmenu = item.Menues.Idmenu,
-					Idsubmenu = item.Menues.Idsubmenu,
-					link = item.Menues.link,
-					Ejecutable = item.Menues.Ejecutable,
 
-				};
-				dtoMenu.Add(unmenu);
+			if (idusuario != 0)
+			{
+				var Lmenu = await _Conte.MenuUsuarios
+										.Where(w => w.Usuario_id == idusuario)
+										.Include(i => i.Menues)
+										.ToListAsync();
+
+				
+				foreach (var item in Lmenu)
+				{
+					var unmenu = new MenuDto
+					{
+						Id = item.Id,
+						Nombre = item.Menues.Nombre,
+						Esmenu = item.Menues.Esmenu,
+						EsSubmenu = item.Menues.EsSubmenu,
+						Eslink = item.Menues.Eslink,
+						Idmenu = item.Menues.Idmenu,
+						Idsubmenu = item.Menues.Idsubmenu,
+						link = item.Menues.link,
+						Ejecutable = item.Menues.Ejecutable,
+
+					};
+					dtoMenu.Add(unmenu);
+
+				}
+			}
+			else
+			{
+				var Lmenu = await _Conte.Menues
+										.ToListAsync();
+
+				foreach (var item in Lmenu)
+				{
+					var unmenu = new MenuDto
+					{
+						Id = item.Id,
+						Nombre = item.Nombre,
+						Esmenu = item.Esmenu,
+						EsSubmenu = item.EsSubmenu,
+						Eslink = item.Eslink,
+						Idmenu = item.Idmenu,
+						Idsubmenu = item.Idsubmenu,
+						link = item.link,
+						Ejecutable = item.Ejecutable,
+
+					};
+					dtoMenu.Add(unmenu);
+
+				}
 
 			}
+
 
 			return dtoMenu;
 
@@ -92,13 +119,17 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<Menu> GetById(int Id)
 		{
-			throw new NotImplementedException();
+			Menu Lmenu = new Menu();
+			Lmenu = await _Conte.Menues
+						.Where(w => w.Id == Id)
+						.FirstOrDefaultAsync();
+
+			return Lmenu;
 		}
 
 
-		public async Task<PagedResponse<List<MenuDto>>> PostAll(PaginationFilter filter)
+		public async Task<PagedResponse<List<Menu>>> PostAll(PaginationFilter filter)
 		{
-
 			throw new NotImplementedException();
 		}
 

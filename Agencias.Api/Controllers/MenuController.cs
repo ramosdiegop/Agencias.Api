@@ -22,14 +22,29 @@ namespace Agencias.Api.Controllers
 			_IMenu = Imenu;
 			_mapping = Imapp;
 		}
-		
-		// GETAll: api Lista usuario/
-		[HttpPost]
-		public async Task<ActionResult<PagedResponse<List<Menu>>>> PostAll([FromBody] PaginationFilter filter)
+
+		[HttpGet]
+		public async Task<ActionResult<IEnumerable<ItemDto>>> GetByUsuario([FromQuery] int idusuario)
 		{
 			try
 			{
-				var Lmenu = await _IMenu.PostAll(filter);
+				var Lmenu = await _IMenu.GetByUsuario(idusuario);
+				var i_menu = _mapping.MappMenu(Lmenu);
+				return Ok(i_menu);
+
+			}
+			catch (Exception e)
+			{
+				return NotFound("Error: " + e.Message);
+			}
+
+		}
+		[HttpGet("{idmenu}")]
+		public async Task<ActionResult<Menu>> GetById(int idmenu)
+		{
+			try
+			{
+				var Lmenu = await _IMenu.GetById(idmenu);				
 				return Ok(Lmenu);
 
 			}
@@ -40,26 +55,44 @@ namespace Agencias.Api.Controllers
 
 		}
 
+		/*		[HttpGet("{usuario}")]
+				public async Task<ActionResult<IEnumerable<Menu>>> GetAllSelect(int usuario)
+
+				{
+					try
+					{
+						if ((usuario == 0))
+						{
+							var Lmenu = await _IMenu.GetAllSelect(usuario);
+							var i_menu = _mapping.MappMenuCrud(Lmenu);
+							return Ok(i_menu);
+						}
+						else
+						{
+							var Lmenu = await _IMenu.GetAllSelect(usuario);
+							var i_menu = _mapping.MappMenuCrud(Lmenu);
+							return Ok(i_menu);
+						}
 
 
-		[HttpGet("{usuario}")]
-		public async Task<ActionResult<IEnumerable<MenuAccesosDto>>> GetAllSelect(int usuario)
+					}
+					catch (Exception e)
+					{
+						return NotFound("Error: " + e.Message);
+					}
+
+				}*/
+
+
+
+		// GETAll: api Lista usuario/
+		[HttpPost]
+		public async Task<ActionResult<PagedResponse<List<Menu>>>> PostAll([FromBody] PaginationFilter filter)
 		{
 			try
 			{
-				if ((usuario == 0))
-				{
-					var Lmenu = await _IMenu.GetAllSelect(usuario);
-					var i_menu = _mapping.MappMenuCrud(Lmenu);
-					return Ok(i_menu);
-				}
-				else
-				{
-  				   var Lmenu = await _IMenu.GetAllSelect(usuario);
-				   var i_menu = _mapping.MappMenuCrud(Lmenu);
-				   return Ok(i_menu);
-				}
-				
+				var Lmenu = await _IMenu.PostAll(filter);
+				return Ok(Lmenu);
 
 			}
 			catch (Exception e)
@@ -124,22 +157,6 @@ namespace Agencias.Api.Controllers
 
 		}
 
-		[HttpGet]
-		public async Task<ActionResult<IEnumerable<ItemDto>>> GetByUsuario([FromQuery] int idusuario)
-		{
-			try
-			{
-				var Lmenu = await _IMenu.GetByUsuario(idusuario);
-				var i_menu = _mapping.MappMenu(Lmenu);
-				return Ok(i_menu);
-
-			}
-			catch (Exception e)
-			{
-				return NotFound("Error: " + e.Message);
-			}
-
-		}
 
 
 

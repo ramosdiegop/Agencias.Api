@@ -11,7 +11,7 @@ namespace Agencias.Api.Data.Interfaz
 {
 	public interface IMenu
 	{
-		Task<PagedResponse<List<MenuDto>>> PostAll(PaginationFilter filter);
+		Task<PagedResponse<List<Menu>>> PostAll(PaginationFilter filter);
 		Task<List<Menu>> GetAllSelect(int idusuario);
 		Task<Menu> Create(Menu menu);
 		Task<Menu> Update(Menu menu);
