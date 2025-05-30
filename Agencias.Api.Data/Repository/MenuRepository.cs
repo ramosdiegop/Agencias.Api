@@ -3,8 +3,9 @@ using Agencias.Api.Data.Data;
 using Agencias.Api.Data.Interfaz;
 using Agencias.Api.Domain.Dtos;
 using Agencias.Api.Domain.Pagination;
+using LinqKit;
 using Microsoft.EntityFrameworkCore;
-using System;
+using System.Linq.Dynamic.Core;
 
 
 namespace Agencias.Api.Data.Repository
@@ -85,12 +86,23 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<Menu> Create(Menu menu)
 		{
-			throw new NotImplementedException();
+			await _Conte.Menues.AddAsync(menu);
+			await _Conte.SaveChangesAsync();
+			return menu;
 		}
 
 		public async Task<string> Delete(int id)
 		{
-			throw new NotImplementedException();
+			string error = "Registro eliminado Correctamente ";
+			var ElMenu = _Conte.Menues.Find(id);
+			if (ElMenu != null)
+			{
+				_Conte.Menues.Remove(ElMenu);
+				await _Conte.SaveChangesAsync();
+			}
+			else error = "No se encontro el registro";
+
+			return error;
 		}
 
 		public async Task<List<Menu>> GetAllSelect(int idusuario)
@@ -120,9 +132,7 @@ namespace Agencias.Api.Data.Repository
 		public async Task<Menu> GetById(int Id)
 		{
 			Menu Lmenu = new Menu();
-			Lmenu = await _Conte.Menues
-						.Where(w => w.Id == Id)
-						.FirstOrDefaultAsync();
+			Lmenu = await _Conte.Menues.Where(w => w.Id == Id).FirstOrDefaultAsync();
 
 			return Lmenu;
 		}
@@ -130,12 +140,109 @@ namespace Agencias.Api.Data.Repository
 
 		public async Task<PagedResponse<List<Menu>>> PostAll(PaginationFilter filter)
 		{
-			throw new NotImplementedException();
+			var validFilter = new PaginationFilter();
+			validFilter.PageNumber = filter.PageNumber;
+			validFilter.PageSize = filter.PageSize;
+			List<Menu> Lmenu = new List<Menu>();
+			int totalRecords = 0;
+			string Elorden = filter.COrder;
+			string LaForma = filter.FAscend == true ? "ascending" : "descending";
+
+
+			var Verify = new FunctionRepository();
+			var listaarray = Verify.VerifyArrayFilter(filter.Filtro, filter.Colum);
+			filter.Filtro = listaarray[0];
+			filter.Colum = listaarray[1];
+
+			if (string.IsNullOrEmpty(filter.COrder))
+				Elorden = "Id";
+
+			if (filter.Colum.Count() == 0)
+			{
+				var Lmenu1 = await _Conte.Menues
+										.OrderBy($"{Elorden} {LaForma}")
+										.Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
+										.Take(validFilter.PageSize).ToListAsync();
+
+				Lmenu = Lmenu1;
+				totalRecords = _Conte.Menues.Count();
+			}
+			else
+			{
+				string[] col = filter.Colum;
+				string[] fil = filter.Filtro;
+				var predicate = PredicateBuilder.New<Menu>();
+
+				string fno, fcu = "";
+				int fid = 0;
+				int cont = 0;
+				foreach (string item in filter.Colum)
+				{
+					if (item.ToString().ToUpper() == "ID")
+					{
+						fid = int.Parse(filter.Filtro[cont].ToString());
+						predicate = predicate.And(p => p.Id == fid);
+					}
+					if (item.ToString().ToUpper() == "NOMBRE")
+					{
+						fno = filter.Filtro[cont].ToString();
+						predicate = predicate.And(p => p.Nombre.Contains(fno));
+
+					}
+					if (item.ToString().ToUpper() == "LINK")
+					{
+						fcu = filter.Filtro[cont].ToString();
+						predicate = predicate.And(p => p.link.Contains(fcu));
+					}
+					if (item.ToString().ToUpper() == "ESMENU")
+					{
+						fcu = filter.Filtro[cont].ToString();
+						predicate = predicate.And(p => p.Esmenu==fcu);
+					}
+					if (item.ToString().ToUpper() == "ESSUBMENU")
+					{
+						fcu = filter.Filtro[cont].ToString();
+						predicate = predicate.And(p => p.EsSubmenu==fcu);
+					}
+					if (item.ToString().ToUpper() == "ESLINK")
+					{
+						fcu = filter.Filtro[cont].ToString();
+						predicate = predicate.And(p => p.Eslink==fcu);
+					}
+					if (item.ToString().ToUpper() == "EJECUTABLE")
+					{
+						fcu = filter.Filtro[cont].ToString();
+						predicate = predicate.And(p => p.Ejecutable==fcu);
+					}
+
+					cont++;
+				}
+
+				var Lmenu1 = await _Conte.Menues.Where(predicate)
+									.OrderBy($"{Elorden} {LaForma}")
+									.Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
+									.Take(validFilter.PageSize).ToListAsync();
+
+				Lmenu = Lmenu1;
+
+
+				totalRecords = _Conte.Menues.Where(predicate).Count();
+
+			}
+
+			var totalPages = decimal.ToInt32(totalRecords / validFilter.PageSize);
+			var pagedReponse = new PagedResponse<List<Menu>>(Lmenu, validFilter.PageNumber, validFilter.PageSize, totalPages, totalRecords);
+
+			return pagedReponse;
+
+
 		}
 
 		public async Task<Menu> Update(Menu menu)
 		{
-			throw new NotImplementedException();
+			_Conte.Menues.Update(menu);
+			await _Conte.SaveChangesAsync();
+			return menu;
 		}
 
 
