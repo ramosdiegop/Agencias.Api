@@ -105,28 +105,31 @@ namespace Agencias.Api.Data.Repository
 			return error;
 		}
 
-		public async Task<List<Menu>> GetAllSelect(int idusuario)
+		public async Task<List<MenuUsuario>> GetAllSelect(int idusuario)
 		{
 			List<Menu> Lmenu = new List<Menu>();
-			if (idusuario == 0)
-				Lmenu = await _Conte.Menues.ToListAsync();
+			List<MenuUsuario> usuariomenu = new List<MenuUsuario>();
+			if (idusuario == 0) { 
+				//Lmenu = await _Conte.Menues.ToListAsync();
+				//usuariomenu = await _Conte.MenuUsuarios.ToListAsync();
+			}
 			else
 			{
-				var usuariomenu = await _Conte.MenuUsuarios
+				usuariomenu = await _Conte.MenuUsuarios
 									.Where(w => w.Usuario_id == idusuario)
-									.Include(i => i.Menues)
+									//.Include(i => i.Menues)
 									.ToListAsync();
 
-				foreach (var item in usuariomenu)
+				/*foreach (var item in usuariomenu)
 				{					
 					Lmenu.Add(item.Menues);
-				}
+				}*/
 				
 
 			}
 				
 
-			return Lmenu;
+			return usuariomenu;
 		}
 
 		public async Task<Menu> GetById(int Id)

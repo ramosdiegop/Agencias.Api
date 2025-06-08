@@ -39,6 +39,7 @@ namespace Agencias.Api.Controllers
 			}
 
 		}
+
 		[HttpGet("{idmenu}")]
 		public async Task<ActionResult<Menu>> GetById(int idmenu)
 		{
@@ -55,33 +56,34 @@ namespace Agencias.Api.Controllers
 
 		}
 
-		/*		[HttpGet("{usuario}")]
-				public async Task<ActionResult<IEnumerable<Menu>>> GetAllSelect(int usuario)
+		[HttpPost("usuario/{idusuario}")]
+		public async Task<ActionResult<IEnumerable<MenuUsuario>>> PostAllUsuario(int idusuario)
 
+		{
+			var usuario = idusuario;
+			try
+			{
+				if ((usuario == 0))
 				{
-					try
-					{
-						if ((usuario == 0))
-						{
-							var Lmenu = await _IMenu.GetAllSelect(usuario);
-							var i_menu = _mapping.MappMenuCrud(Lmenu);
-							return Ok(i_menu);
-						}
-						else
-						{
-							var Lmenu = await _IMenu.GetAllSelect(usuario);
-							var i_menu = _mapping.MappMenuCrud(Lmenu);
-							return Ok(i_menu);
-						}
+					var Lmenu = await _IMenu.GetAllSelect(usuario);
+					//var i_menu = _mapping.MappMenuCrud(Lmenu);
+					return Ok(Lmenu);
+				}
+				else
+				{
+					var Lmenu = await _IMenu.GetAllSelect(usuario);
+					//var i_menu = _mapping.MappMenuCrud(Lmenu);
+					return Ok(Lmenu);
+				}
 
 
-					}
-					catch (Exception e)
-					{
-						return NotFound("Error: " + e.Message);
-					}
+			}
+			catch (Exception e)
+			{
+				return NotFound("Error: " + e.Message);
+			}
 
-				}*/
+		}
 
 
 

@@ -1226,6 +1226,52 @@
       }
     },
     "/api/Menu": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "parameters": [
+          {
+            "name": "idusuario",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "post": {
         "tags": [
           "Menu"
@@ -1317,15 +1363,18 @@
             }
           }
         }
-      },
+      }
+    },
+    "/api/Menu/{idmenu}": {
       "get": {
         "tags": [
           "Menu"
         ],
         "parameters": [
           {
-            "name": "idusuario",
-            "in": "query",
+            "name": "idmenu",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1338,26 +1387,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ItemDto"
-                  }
+                  "$ref": "#/components/schemas/Menu"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ItemDto"
-                  }
+                  "$ref": "#/components/schemas/Menu"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ItemDto"
-                  }
+                  "$ref": "#/components/schemas/Menu"
                 }
               }
             }
@@ -1365,14 +1405,14 @@
         }
       }
     },
-    "/api/Menu/{usuario}": {
-      "get": {
+    "/api/Menu/usuario/{idusuario}": {
+      "post": {
         "tags": [
           "Menu"
         ],
         "parameters": [
           {
-            "name": "usuario",
+            "name": "idusuario",
             "in": "path",
             "required": true,
             "schema": {
@@ -1389,7 +1429,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/MenuAccesosDto"
+                    "$ref": "#/components/schemas/MenuUsuario"
                   }
                 }
               },
@@ -1397,7 +1437,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/MenuAccesosDto"
+                    "$ref": "#/components/schemas/MenuUsuario"
                   }
                 }
               },
@@ -1405,7 +1445,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/MenuAccesosDto"
+                    "$ref": "#/components/schemas/MenuUsuario"
                   }
                 }
               }
@@ -3081,16 +3121,6 @@
         },
         "additionalProperties": false
       },
-      "DataMenu": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "EstadoProductor": {
         "type": "object",
         "properties": {
@@ -3469,26 +3499,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/MenuUsuario"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "MenuAccesosDto": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string",
-            "nullable": true
-          },
-          "data": {
-            "$ref": "#/components/schemas/DataMenu"
-          },
-          "children": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MenuAccesosDto"
             },
             "nullable": true
           }

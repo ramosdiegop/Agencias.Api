@@ -699,6 +699,32 @@
   },
   {
     "ContainingType": "Agencias.Api.Controllers.MenuController",
+    "Method": "GetByUsuario",
+    "RelativePath": "api/Menu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idusuario",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Agencias.Api.Domain.Dtos.ItemDto, Agencias.Api.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Agencias.Api.Controllers.MenuController",
     "Method": "PostAll",
     "RelativePath": "api/Menu",
     "HttpMethod": "POST",
@@ -740,32 +766,6 @@
     "ReturnTypes": [
       {
         "Type": "Agencias.Api.Data.Data.Menu",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Agencias.Api.Controllers.MenuController",
-    "Method": "GetByUsuario",
-    "RelativePath": "api/Menu",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "idusuario",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Agencias.Api.Domain.Dtos.ItemDto, Agencias.Api.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -824,21 +824,47 @@
   },
   {
     "ContainingType": "Agencias.Api.Controllers.MenuController",
-    "Method": "GetAllSelect",
-    "RelativePath": "api/Menu/{usuario}",
+    "Method": "GetById",
+    "RelativePath": "api/Menu/{idmenu}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
+        "Name": "idmenu",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Agencias.Api.Domain.Dtos.MenuAccesosDto, Agencias.Api.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Agencias.Api.Data.Data.Menu",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Agencias.Api.Controllers.MenuController",
+    "Method": "PostAllUsuario",
+    "RelativePath": "api/Menu/usuario/{idusuario}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idusuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Agencias.Api.Data.Data.MenuUsuario, Agencias.Api.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

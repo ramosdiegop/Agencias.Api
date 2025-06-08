@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.data\\repository\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|solutionrelative:agencias.api.data\\repository\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api\\agencias.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|solutionrelative:agencias.api\\agencias.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|solutionrelative:agencias.api\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.data\\interfaz\\imenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|solutionrelative:agencias.api.data\\interfaz\\imenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.data\\data\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|solutionrelative:agencias.api.data\\data\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E43D09-5967-4694-8A00-9CF0834D1A79}|Agencias.Api.Domain\\Agencias.Api.Domain.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.domain\\dtos\\menudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E43D09-5967-4694-8A00-9CF0834D1A79}|Agencias.Api.Domain\\Agencias.Api.Domain.csproj|solutionrelative:agencias.api.domain\\dtos\\menudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.data\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|solutionrelative:agencias.api.data\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.data\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|solutionrelative:agencias.api.data\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52E43D09-5967-4694-8A00-9CF0834D1A79}|Agencias.Api.Domain\\Agencias.Api.Domain.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.domain\\dtos\\menudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52E43D09-5967-4694-8A00-9CF0834D1A79}|Agencias.Api.Domain\\Agencias.Api.Domain.csproj|solutionrelative:agencias.api.domain\\dtos\\menudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.data\\data\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|solutionrelative:agencias.api.data\\data\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,7 +75,57 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Agencias.Api.Data",
+              "Title": "Agencias.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Agencias.Api.csproj",
+              "RelativeDocumentMoniker": "Agencias.Api\\Agencias.Api.csproj",
+              "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Agencias.Api.csproj",
+              "RelativeToolTip": "Agencias.Api\\Agencias.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-07T19:36:05.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IMenu.cs",
+              "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Interfaz\\IMenu.cs",
+              "RelativeDocumentMoniker": "Agencias.Api.Data\\Interfaz\\IMenu.cs",
+              "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Interfaz\\IMenu.cs",
+              "RelativeToolTip": "Agencias.Api.Data\\Interfaz\\IMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAewA4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T13:47:23.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\MenuController.cs",
+              "RelativeDocumentMoniker": "Agencias.Api\\Controllers\\MenuController.cs",
+              "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\MenuController.cs",
+              "RelativeToolTip": "Agencias.Api\\Controllers\\MenuController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T13:11:22.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Repository\\MenuRepository.cs",
+              "RelativeDocumentMoniker": "Agencias.Api.Data\\Repository\\MenuRepository.cs",
+              "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Repository\\MenuRepository.cs",
+              "RelativeToolTip": "Agencias.Api.Data\\Repository\\MenuRepository.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T13:08:37.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Agencias.Api.Data.csproj",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Agencias.Api.Data.csproj",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Agencias.Api.Data.csproj",
               "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Agencias.Api.Data.csproj",
@@ -71,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Mapper\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Mapper\\MappingProfile.cs",
@@ -95,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Agencias.Api\\Controllers\\UsuarioController.cs",
@@ -103,24 +169,23 @@
               "RelativeToolTip": "Agencias.Api\\Controllers\\UsuarioController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T23:29:53.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T23:29:53.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Data\\Menu.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Data\\Menu.cs",
               "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Data\\Menu.cs",
               "RelativeToolTip": "Agencias.Api.Data\\Data\\Menu.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAABRwB0AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T23:23:50.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Data\\Usuario.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Data\\Usuario.cs",
@@ -128,21 +193,19 @@
               "RelativeToolTip": "Agencias.Api.Data\\Data\\Usuario.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T23:23:47.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T23:23:47.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Repository\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Repository\\UsuarioRepository.cs",
               "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Repository\\UsuarioRepository.cs",
               "RelativeToolTip": "Agencias.Api.Data\\Repository\\UsuarioRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAArwEYAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAArwA4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T22:12:22.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T22:12:22.306Z"
             }
           ]
         }
