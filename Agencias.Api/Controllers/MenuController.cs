@@ -159,8 +159,41 @@ namespace Agencias.Api.Controllers
 
 		}
 
+		/*Menu Usuario  Accesos*/
+		[HttpPost("acceso/{id}")]
+		public async Task<ActionResult<MenuUsuario>> PostAccesos(MenuUsuario acceso)
+		{
+			MenuUsuario elacceso;
+			try
+			{
+				elacceso = await _IMenu.CreateAcceso(acceso);
+				return Ok(elacceso);
+			}
+			catch (Exception e)
+			{
+
+				return NotFound("Error: " + e.Message);
+			}
 
 
+		}
+
+		[HttpDelete("acceso/{id}")]
+		public async Task<ActionResult> DeleteAcceso(int id)
+		{
+			try
+			{
+				string resultado = await _IMenu.DeleteAcceso(id);
+				return Ok(resultado);
+
+			}
+			catch (Exception e)
+			{
+				return NotFound(e.Message);
+
+			}
+
+		}
 
 	}
 

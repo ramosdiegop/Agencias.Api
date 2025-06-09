@@ -248,6 +248,34 @@ namespace Agencias.Api.Data.Repository
 			return menu;
 		}
 
+		public async Task<MenuUsuario> CreateAcceso(MenuUsuario acceso)
+		{
+			await _Conte.MenuUsuarios.AddAsync(acceso);
+			await _Conte.SaveChangesAsync();
+			return acceso;
+		}
 
+		public async Task<MenuUsuario> UpdateAcceso(MenuUsuario acceso)
+		{
+			_Conte.MenuUsuarios.Update(acceso);
+			await _Conte.SaveChangesAsync();
+			return acceso;
+
+		}
+
+		public async Task<string> DeleteAcceso(int accesoid)
+		{
+			string error = "Registro eliminado Correctamente ";
+			var ElMenuusaurio = _Conte.MenuUsuarios.Find(accesoid);
+			if (ElMenuusaurio != null)
+			{
+				_Conte.MenuUsuarios.Remove(ElMenuusaurio);
+				await _Conte.SaveChangesAsync();
+			}
+			else error = "No se encontro el registro";
+
+			return error;
+
+		}
 	}
 }
