@@ -37,7 +37,7 @@ namespace Agencias.Api.Data.Repository
 				{
 					var unmenu = new MenuDto
 					{
-						Id = item.Id,
+						Id = item.Menu_id,
 						Nombre = item.Menues.Nombre,
 						Esmenu = item.Menues.Esmenu,
 						EsSubmenu = item.Menues.EsSubmenu,
