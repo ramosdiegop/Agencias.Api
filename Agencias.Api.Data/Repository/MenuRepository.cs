@@ -248,28 +248,29 @@ namespace Agencias.Api.Data.Repository
 			return menu;
 		}
 
-		public async Task<MenuUsuario> CreateAcceso(MenuUsuario acceso)
+		public async Task<List<MenuUsuario>> CreateAcceso(List<MenuUsuario> acceso)
 		{
-			await _Conte.MenuUsuarios.AddAsync(acceso);
+			await _Conte.MenuUsuarios.AddRangeAsync(acceso);
 			await _Conte.SaveChangesAsync();
 			return acceso;
 		}
 
-		public async Task<MenuUsuario> UpdateAcceso(MenuUsuario acceso)
+		public async Task<List<MenuUsuario>> UpdateAcceso(List<MenuUsuario> acceso)
 		{
-			_Conte.MenuUsuarios.Update(acceso);
+			_Conte.MenuUsuarios.UpdateRange(acceso);
 			await _Conte.SaveChangesAsync();
 			return acceso;
 
 		}
 
-		public async Task<string> DeleteAcceso(int accesoid)
+		public async Task<string> DeleteAcceso(List<MenuUsuario> acceso)
 		{
 			string error = "Registro eliminado Correctamente ";
-			var ElMenuusaurio = _Conte.MenuUsuarios.Find(accesoid);
+			//var ElMenuusaurio = _Conte.MenuUsuarios.Find(acceso);
+			var ElMenuusaurio = acceso;
 			if (ElMenuusaurio != null)
 			{
-				_Conte.MenuUsuarios.Remove(ElMenuusaurio);
+				_Conte.MenuUsuarios.RemoveRange(ElMenuusaurio);
 				await _Conte.SaveChangesAsync();
 			}
 			else error = "No se encontro el registro";

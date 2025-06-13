@@ -18,9 +18,9 @@ namespace Agencias.Api.Data.Interfaz
 		Task<string> Delete(int id);
 		Task<Menu> GetById(int Id);
 		Task<List<MenuDto>> GetByUsuario(int idusuario);
-		Task<MenuUsuario> CreateAcceso(MenuUsuario acceso);
-		Task<MenuUsuario> UpdateAcceso(MenuUsuario acceso);
-		Task<string> DeleteAcceso(int accesoid);
+		Task<List<MenuUsuario>> CreateAcceso(List<MenuUsuario> acceso);
+		Task<List<MenuUsuario>> UpdateAcceso(List<MenuUsuario> acceso);
+		Task<string> DeleteAcceso(List<MenuUsuario> acceso);
 
 
 	}

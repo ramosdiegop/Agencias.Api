@@ -160,10 +160,10 @@ namespace Agencias.Api.Controllers
 		}
 
 		/*Menu Usuario  Accesos*/
-		[HttpPost("acceso/{id}")]
-		public async Task<ActionResult<MenuUsuario>> PostAccesos(MenuUsuario acceso)
+		[HttpPost("acceso/")]
+		public async Task<ActionResult<List<MenuUsuario>>> PostAccesos([FromBody] List<MenuUsuario> acceso)
 		{
-			MenuUsuario elacceso;
+			List<MenuUsuario> elacceso;
 			try
 			{
 				elacceso = await _IMenu.CreateAcceso(acceso);
@@ -178,12 +178,12 @@ namespace Agencias.Api.Controllers
 
 		}
 
-		[HttpDelete("acceso/{id}")]
-		public async Task<ActionResult> DeleteAcceso(int id)
+		[HttpDelete("acceso")]
+		public async Task<ActionResult> DeleteAcceso([FromBody]  List<MenuUsuario> acceso)
 		{
 			try
 			{
-				string resultado = await _IMenu.DeleteAcceso(id);
+				string resultado = await _IMenu.DeleteAcceso( acceso);
 				return Ok(resultado);
 
 			}
