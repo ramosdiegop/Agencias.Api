@@ -850,6 +850,48 @@
   },
   {
     "ContainingType": "Agencias.Api.Controllers.MenuController",
+    "Method": "PostAccesos",
+    "RelativePath": "api/Menu/acceso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "acceso",
+        "Type": "System.Collections.Generic.List\u00601[[Agencias.Api.Data.Data.MenuUsuario, Agencias.Api.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Agencias.Api.Data.Data.MenuUsuario, Agencias.Api.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Agencias.Api.Controllers.MenuController",
+    "Method": "DeleteAcceso",
+    "RelativePath": "api/Menu/acceso",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "acceso",
+        "Type": "System.Collections.Generic.List\u00601[[Agencias.Api.Data.Data.MenuUsuario, Agencias.Api.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Agencias.Api.Controllers.MenuController",
     "Method": "PostAllUsuario",
     "RelativePath": "api/Menu/usuario/{idusuario}",
     "HttpMethod": "POST",
