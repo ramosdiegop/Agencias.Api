@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api\\controllers\\localidadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|solutionrelative:agencias.api\\controllers\\localidadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api\\controllers\\provinciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|solutionrelative:agencias.api\\controllers\\provinciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.data\\repository\\provinciarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|solutionrelative:agencias.api.data\\repository\\provinciarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api\\controllers\\localidadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE0BEEE6-B5E2-4507-AA76-455C97B9E8C4}|Agencias.Api\\Agencias.Api.csproj|solutionrelative:agencias.api\\controllers\\localidadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CB8F52B-F3E9-4A3C-8DC8-EE4FA4EB1E71}|Agencias.Api.Data\\Agencias.Api.Data.csproj|c:\\users\\pcdiego\\source\\repos\\agencias.api\\agencias.api.data\\repository\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,32 +86,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ProvinciaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Repository\\ProvinciaRepository.cs",
+              "RelativeDocumentMoniker": "Agencias.Api.Data\\Repository\\ProvinciaRepository.cs",
+              "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Repository\\ProvinciaRepository.cs",
+              "RelativeToolTip": "Agencias.Api.Data\\Repository\\ProvinciaRepository.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAI8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T18:48:38.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "LocalidadController.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\LocalidadController.cs",
               "RelativeDocumentMoniker": "Agencias.Api\\Controllers\\LocalidadController.cs",
               "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\LocalidadController.cs",
               "RelativeToolTip": "Agencias.Api\\Controllers\\LocalidadController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T12:55:13.776Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ProvinciaController.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\ProvinciaController.cs",
               "RelativeDocumentMoniker": "Agencias.Api\\Controllers\\ProvinciaController.cs",
-              "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\ProvinciaController.cs",
-              "RelativeToolTip": "Agencias.Api\\Controllers\\ProvinciaController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAD8AAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\ProvinciaController.cs*",
+              "RelativeToolTip": "Agencias.Api\\Controllers\\ProvinciaController.cs*",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAewGQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T12:58:56.33Z"
+              "WhenOpened": "2025-06-20T12:58:56.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Agencias.Api.csproj",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Agencias.Api.csproj",
               "RelativeDocumentMoniker": "Agencias.Api\\Agencias.Api.csproj",
@@ -119,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IMenu.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Interfaz\\IMenu.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Interfaz\\IMenu.cs",
@@ -131,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MenuController.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\MenuController.cs",
               "RelativeDocumentMoniker": "Agencias.Api\\Controllers\\MenuController.cs",
@@ -143,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MenuRepository.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Repository\\MenuRepository.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Repository\\MenuRepository.cs",
@@ -155,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Agencias.Api.Data.csproj",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Agencias.Api.Data.csproj",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Agencias.Api.Data.csproj",
@@ -167,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Mapper\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Mapper\\MappingProfile.cs",
@@ -179,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MenuDto.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Domain\\Dtos\\MenuDto.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Domain\\Dtos\\MenuDto.cs",
@@ -191,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Agencias.Api\\Controllers\\UsuarioController.cs",
@@ -203,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Data\\Menu.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Data\\Menu.cs",
@@ -215,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Data\\Usuario.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Data\\Usuario.cs",
@@ -227,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\PCDiego\\source\\repos\\Agencias.Api\\Agencias.Api.Data\\Repository\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Agencias.Api.Data\\Repository\\UsuarioRepository.cs",

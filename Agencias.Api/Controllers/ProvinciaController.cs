@@ -91,5 +91,24 @@ namespace Agencias.Api.Controllers
 
 		}
 
+		[HttpGet("{id}")]
+		public async Task<ActionResult> GetById(int id)
+		{
+			try
+			{
+				var resultado = await _IProvincia.GetById(id);
+				return Ok(resultado);
+
+			}
+			catch (Exception e)
+			{
+				return NotFound(e.Message);
+
+			}
+
+		}
+
+
+
 	}
 }

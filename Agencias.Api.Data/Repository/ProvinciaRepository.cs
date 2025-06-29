@@ -140,9 +140,10 @@ namespace Agencias.Api.Data.Repository
 
 		}
 
-		public Task<Provincia> GetById(int Id)
+		public async Task<Provincia> GetById(int Id)
 		{
-			throw new NotImplementedException();
+			var LProvi = await _Conte.Provincia.Where(w => w.Id == Id).FirstOrDefaultAsync();
+			return LProvi;
 		}
 
 		public async Task<Provincia> Create(Provincia Provincia)

@@ -1141,6 +1141,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Agencias.Api.Controllers.ProvinciaController",
+    "Method": "GetById",
+    "RelativePath": "api/Provincia/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Agencias.Api.Controllers.SubCategoriaController",
     "Method": "PostAll",
     "RelativePath": "api/SubCategoria",
