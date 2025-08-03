@@ -25,6 +25,10 @@ namespace Agencias.Api.Data.Data
 		public string? Banco { get; set; }
 		[ForeignKey("Agente")]
 		public int Idagente { get; set; }
+		public DateTime Created_Date { get; set; }
+		public int Created_User { get; set; }
+		public DateTime? Modified_Date { get; set; }
+		public int? Modified_User { get; set; }
 
 
 		public virtual Agente? Agente { get; set; }

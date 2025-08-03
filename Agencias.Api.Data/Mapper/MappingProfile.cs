@@ -26,7 +26,12 @@ namespace Agencias.Api.Data.Mapper
 				Llave = amap.Llave,
 				Ok = amap.Ok,
 				Banco = amap.Banco,
-				Idagente = amap.Idagente
+				Idagente = amap.Idagente,
+				Created_Date = amap.Created_Date,
+				Created_User = amap.Created_User,
+				Modified_Date = amap.Modified_Date,
+				Modified_User = amap.Modified_User
+				
 			};
 
 			return age;

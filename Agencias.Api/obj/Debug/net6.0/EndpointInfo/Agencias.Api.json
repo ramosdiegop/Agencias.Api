@@ -2802,6 +2802,24 @@
             "type": "integer",
             "format": "int32"
           },
+          "created_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_User": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modified_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "modified_User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "agente": {
             "$ref": "#/components/schemas/Agente"
           },
@@ -2858,6 +2876,24 @@
           "idagente": {
             "type": "integer",
             "format": "int32"
+          },
+          "created_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_User": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modified_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "modified_User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           },
           "localidad": {
             "type": "string",

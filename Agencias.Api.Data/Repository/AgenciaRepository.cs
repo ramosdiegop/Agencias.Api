@@ -159,7 +159,11 @@ namespace Agencias.Api.Data.Repository
 					Banco = item.Banco,
 					Idagente = item.Idagente,
 					Localidad = (item.Localidad.CodigoPostal == null) ? " " : item.Localidad.CodigoPostal.ToString() + "-" + item.Localidad.Detalle,
-					Agente = item.Agente.Nombre
+					Agente = item.Agente.Nombre,
+					Created_Date = item.Created_Date,
+					Created_User = item.Created_User,
+					Modified_Date = item.Modified_Date,
+					Modified_User = item.Modified_User
 
 				};
 				dtoAgencia.Add(UnaAgencia);
