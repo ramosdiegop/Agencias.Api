@@ -119,7 +119,11 @@ namespace Agencias.Api.Data.Repository
 					Detalle = item.Detalle,
 					CodigoPostal = item.CodigoPostal,
 					Idprovincia = item.Idprovincia,
-					Provincia = (item.Provincia == null) ? "" : item.Provincia.Detalle
+					Provincia = (item.Provincia == null) ? "" : item.Provincia.Detalle,
+					Created_Date = item.Created_Date,
+					Created_User = item.Created_User,
+					Modified_Date = item.Modified_Date,
+					Modified_User = item.Modified_User
 
 				};
 				dtoLocalidad.Add(UnaLocaliad);

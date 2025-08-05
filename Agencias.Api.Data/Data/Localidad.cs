@@ -18,6 +18,10 @@ namespace Agencias.Api.Data.Data
 		public string? Detalle { get; set; }
 		[ForeignKey("Provincia")]
 		public int? Idprovincia { get; set; }
+		public DateTime Created_Date { get; set; }
+		public int Created_User { get; set; }
+		public DateTime? Modified_Date { get; set; }
+		public int? Modified_User { get; set; }
 
 		public virtual Provincia? Provincia { get; set; }
 		public virtual ICollection<Agencia>? Agencias { get; set; }

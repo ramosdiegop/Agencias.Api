@@ -19,6 +19,10 @@ namespace Agencias.Api.Data.Data
 		public int Id { get; set; }
 		public string? Nombre { get; set; }
 		public string? Cuit { get; set; }
+		public DateTime Created_Date { get; set; }
+		public int Created_User { get; set; }
+		public DateTime? Modified_Date { get; set; }
+		public int? Modified_User { get; set; }
 
 		public virtual ICollection<Agencia>? Agencias { get; set; }
 	}

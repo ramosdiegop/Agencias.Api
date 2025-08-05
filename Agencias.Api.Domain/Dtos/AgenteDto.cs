@@ -11,6 +11,10 @@ namespace Agencias.Api.Domain.Dtos
 		public int Id { get; set; }
 		public string? Nombre { get; set; }
 		public string? Cuit { get; set; }
+		public DateTime Created_Date { get; set; }
+		public int Created_User { get; set; }
+		public DateTime? Modified_Date { get; set; }
+		public int? Modified_User { get; set; }
 
 		public List<AgenteAgencia>? agenteAgencias { get; set; }
 

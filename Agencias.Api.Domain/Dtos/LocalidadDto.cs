@@ -13,5 +13,9 @@ namespace Agencias.Api.Domain.Dtos
 		public string? Detalle { get; set; }
 		public int? Idprovincia { get; set; }
 		public string? Provincia { get; set; }
+		public DateTime Created_Date { get; set; }
+		public int Created_User { get; set; }
+		public DateTime? Modified_Date { get; set; }
+		public int? Modified_User { get; set; }
 	}
 }

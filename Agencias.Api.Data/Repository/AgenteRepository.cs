@@ -127,6 +127,10 @@ namespace Agencias.Api.Data.Repository
 					Id = item.Id,
 					Nombre = item.Nombre,
 					Cuit = item.Cuit,
+					Created_Date = item.Created_Date,
+					Created_User = item.Created_User,
+					Modified_Date = item.Modified_Date,
+					Modified_User = item.Modified_User
 					//agenteAgencias = Aagente
 				};
 				dtoAgente.Add(UnAgente);

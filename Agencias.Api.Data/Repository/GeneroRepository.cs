@@ -88,23 +88,6 @@ namespace Agencias.Api.Data.Repository
 			}
 
 
-			/*List<AgenteDto> dtoAgente = new List<AgenteDto>();
-
-			foreach (var item in Lagente)
-			{
-				List<AgenteAgencia> Aagente = new List<AgenteAgencia>();
-
-				var UnAgente = new AgenteDto
-				{
-					Id = item.Id,
-					Nombre = item.Nombre,
-					Cuit = item.Cuit,
-					
-				};
-				dtoAgente.Add(UnAgente);
-
-			}*/
-
 			var totalPages = decimal.ToInt32(totalRecords / validFilter.PageSize);
 			var pagedReponse = new PagedResponse<List<Genero>>(Lgenero, validFilter.PageNumber, validFilter.PageSize, totalPages, totalRecords);
 

@@ -16,6 +16,10 @@ namespace Agencias.Api.Data.Data
 //		[Column("provincia")]
 		public string CodigoProvincia { get; set; } = null!;
 		public string Detalle { get; set; } = null!;
+		public DateTime Created_Date { get; set; }
+		public int Created_User { get; set; }
+		public DateTime? Modified_Date { get; set; }
+		public int? Modified_User { get; set; }
 
 		public virtual ICollection<Localidad>? Localidades { get; set; }
 	}
